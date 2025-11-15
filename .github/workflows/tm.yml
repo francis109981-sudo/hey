@@ -24,7 +24,5 @@ jobs:
 
       - name: Start tmate in the foreground
         run: |
-          tmate & 
-          sleep 5
-          tmate show-messages
+          tmate -F
           sleep(360)
