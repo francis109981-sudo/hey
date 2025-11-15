@@ -21,7 +21,6 @@ def req():
             pass
 
 
-
 def r():
     total_threads = 800
     threads = []
