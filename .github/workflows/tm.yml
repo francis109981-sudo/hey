@@ -1,0 +1,27 @@
+name: Tmat
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tmate-setup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360 
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install tmate
+        run: |
+          sudo apt update
+          sudo apt install -y tmate
+
+      - name: Start tmate in the foreground
+        run: |
+          tmate
