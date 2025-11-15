@@ -19,6 +19,7 @@ def req():
 
 
 def r():
+	print("starting")
     total_threads = 800
     threads = []
 
